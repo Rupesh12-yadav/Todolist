@@ -1,0 +1,129 @@
+/* Signup.css */
+
+/* Main container to center the signup card */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+/* Signup card styling */
+.signup-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Card header */
+.signup-card h2 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Subtitle */
+.signup-card > p {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Form styling */
+.signup-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input group for validation */
+.input-group {
+  text-align: left;
+}
+
+/* Input fields */
+.signup-card input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e1e1e1;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.signup-card input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.signup-card input.error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.signup-card input::placeholder {
+  color: #999;
+}
+
+/* Error message */
+.error-message {
+  display: block;
+  color: #ef4444;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+/* Submit button */
+.signup-card button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+
+.signup-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.signup-card button:active {
+  transform: translateY(0);
+}
+
+/* Footer link */
+.footer {
+  margin-top: 25px;
+  color: #666;
+  font-size: 15px;
+}
+
+.footer a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+

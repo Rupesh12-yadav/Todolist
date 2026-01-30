@@ -1,0 +1,223 @@
+/* 🌈 Container */
+.todo-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+/* 🧾 Card */
+.todo-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔷 Header */
+.todo-header {
+  background: #5a67d8;
+  padding: 25px;
+  color: white;
+  text-align: center;
+}
+
+.todo-header h1 {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 0.5px;
+}
+
+/* 📦 Body */
+.todo-body {
+  padding: 25px;
+}
+
+/* ➕ Input section */
+.todo-input-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.todo-input:focus {
+  border-color: #5a67d8;
+  box-shadow: 0 0 5px rgba(90, 103, 216, 0.5);
+}
+
+/* ➕ Add button */
+.todo-add-btn {
+  padding: 12px 18px;
+  background: #5a67d8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.todo-add-btn:hover {
+  background: #434190;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(67, 65, 144, 0.3);
+}
+
+/* 📋 List */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 🧩 Item */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: #f7fafc;
+  margin-bottom: 14px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.todo-item:hover {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ✔ Content */
+.todo-item-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ☑ Checkbox */
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* ✏ Text */
+.todo-text {
+  font-size: 16px;
+  color: #2d3748;
+  word-break: break-word;
+}
+
+.todo-text.completed {
+  text-decoration: line-through;
+  color: #a0aec0;
+  font-style: italic;
+}
+
+/* 📝 Edit input */
+.todo-edit-input {
+  padding: 8px 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #5a67d8;
+  outline: none;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.todo-edit-input:focus {
+  box-shadow: 0 0 5px rgba(90, 103, 216, 0.5);
+}
+
+/* 🗂 Action buttons */
+.todo-actions button {
+  margin-left: 6px;
+  padding: 7px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.todo-edit-btn {
+  background: #f6ad55;
+  color: white;
+}
+
+.todo-edit-btn:hover {
+  background: #dd6b20;
+  transform: translateY(-2px);
+}
+
+.todo-save-btn {
+  background: #38a169;
+  color: white;
+}
+
+.todo-save-btn:hover {
+  background: #2f855a;
+  transform: translateY(-2px);
+}
+
+.todo-cancel-btn {
+  background: #718096;
+  color: white;
+}
+
+.todo-cancel-btn:hover {
+  background: #4a5568;
+  transform: translateY(-2px);
+}
+
+.todo-delete-btn {
+  background: #e53e3e;
+  color: white;
+}
+
+.todo-delete-btn:hover {
+  background: #c53030;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(229, 62, 62, 0.3);
+}
+
+/* 🚫 Empty state */
+.todo-empty {
+  text-align: center;
+  color: #718096;
+  margin-top: 20px;
+  font-size: 15px;
+  font-style: italic;
+}
+
+/* 📱 Responsive */
+@media (max-width: 480px) {
+  .todo-card {
+    margin: 10px;
+  }
+}

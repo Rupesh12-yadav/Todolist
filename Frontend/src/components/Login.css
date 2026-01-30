@@ -1,0 +1,107 @@
+/* Full page container */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Card style */
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  padding: 2rem;
+}
+
+/* Heading */
+.login-card h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #1f2937; /* gray-800 */
+  margin-bottom: 1.5rem;
+}
+
+.login-card p {
+  text-align: center;
+  color: #6b7280; /* gray-500 */
+  margin-bottom: 2rem;
+}
+
+/* Input group for validation */
+.input-group {
+  margin-bottom: 1rem;
+}
+
+/* Form inputs */
+.login-card input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 0.5rem;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.login-card input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.login-card input.error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+/* Error message */
+.error-message {
+  display: block;
+  color: #ef4444;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+/* Button */
+.login-card button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: none;
+  margin-top: 1rem;
+}
+
+.login-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Footer link */
+.login-card .footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #4b5563; /* gray-600 */
+  font-size: 0.875rem;
+}
+
+.login-card .footer a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-card .footer a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
