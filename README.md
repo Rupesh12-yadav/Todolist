@@ -48,19 +48,49 @@ Todo_list/
 ## Installation & Setup
 
 ### Prerequisites
-- Node.js
-- MongoDB
+- Node.js (v14 or higher)
+- MongoDB (local installation or MongoDB Atlas)
 - Git
 
-### Backend Setup
+### Quick Start
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd Todo_list
+```
+
+2. Install all dependencies:
+```bash
+npm run install-deps
+```
+
+3. Setup Backend:
+```bash
+cd Backend
+cp .env.example .env
+# Edit .env file with your MongoDB connection string and JWT secret
+```
+
+4. Start the application:
+```bash
+# Terminal 1 - Start Backend (from root directory)
+npm run server
+
+# Terminal 2 - Start Frontend (from root directory)
+npm run client
+```
+
+### Manual Setup
+
+#### Backend Setup
 ```bash
 cd Backend
 npm install
-# Create .env file with your MongoDB connection string
+# Create .env file with your configuration (see .env.example)
 npm start
 ```
 
-### Frontend Setup
+#### Frontend Setup
 ```bash
 cd Frontend
 npm install
@@ -81,12 +111,14 @@ npm run dev
 
 ## Environment Variables
 
-Create `.env` file in Backend directory:
+Create `.env` file in Backend directory (use `.env.example` as template):
 ```
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
+MONGODB_URI=mongodb://127.0.0.1:27017/todoapp
+JWT_SECRET=your_jwt_secret_key_here
 PORT=5000
 ```
+
+**Note**: Never commit your actual `.env` file to version control.
 
 ## Demo
 
@@ -97,6 +129,18 @@ This application allows users to:
 4. Edit existing tasks
 5. Delete unwanted tasks
 6. View all tasks in a clean, responsive interface
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
 
 ## Author
 
