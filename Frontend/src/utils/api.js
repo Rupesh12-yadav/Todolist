@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:3001/api', // ✅ /api add kiya
+  baseURL: 'http://localhost:5000/api', // ✅ Backend port 5000
 });
 
 API.interceptors.request.use(config => {
@@ -11,5 +11,17 @@ API.interceptors.request.use(config => {
   }
   return config;
 });
+
+// Response interceptor for error handling
+API.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response?.status === 401) {
+      localStorage.removeItem('token');
+      window.location.href = '/login';
+    }
+    return Promise.reject(error);
+  }
+);
 
 export default API;

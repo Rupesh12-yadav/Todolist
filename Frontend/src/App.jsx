@@ -17,18 +17,22 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
 
         {/* Protected route */}
         <Route 
-          path="/task" 
+          path="/tasks" 
           element={
             <ProtectedRoute>
               <TodoList />
             </ProtectedRoute>
           } 
         />
+        
+        {/* Redirect any unknown routes to signup */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );

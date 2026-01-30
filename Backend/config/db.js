@@ -2,12 +2,13 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI, {
-     
-    });
-    console.log('MongoDB connected');
+    const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/todoapp';
+    console.log('Connecting to MongoDB:', mongoURI);
+    
+    await mongoose.connect(mongoURI);
+    console.log('✅ MongoDB Connected Successfully');
   } catch (err) {
-    console.error(err.message);
+    console.error('❌ MongoDB Connection Error:', err.message);
     process.exit(1);
   }
 };

@@ -55,7 +55,7 @@ function Login() {
       const res = await API.post("/auth/login", formData);
       localStorage.setItem("token", res.data.token);
       alert("Login successful ✅");
-      navigate("/task");
+      navigate("/tasks");
     } catch (err) {
       alert(err.response?.data?.message || "Login failed");
     }
